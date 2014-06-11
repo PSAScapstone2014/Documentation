@@ -252,8 +252,7 @@ Keeping with the main version of ChibiOS will allow for more stability in the lo
 
 The project will be built in a separate GitHub repository. When the tests need to be used, the repository will be compiled separately.
 
-####3.3.4 A goal will be to merge our changes back into the ChibiOS mainline and, as such, the changes should be kept compartmentalized as 
-much as possible.####
+####3.3.4 A goal will be to merge our changes back into the ChibiOS mainline and, as such, the changes should be kept compartmentalized as much as possible.####
 
 ####3.3.5 Functional tests will be the primary motivator. Unit tests are not required.####
 
