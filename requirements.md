@@ -5,15 +5,11 @@ Requirements Document
 **_Authored by Capstone Team E (Spring 2014 – Summer 2014) at Portland State University_**
 
 ##1. Introduction##
-This document serves as the compilation of requirements for the Systems testing framework being built for Portland State Aerospace Society (PSAS). 
-It documents the purpose and scope for this project, stakeholders and target audiences. Then it goes on to define each requirement for the project.
+This document serves as the compilation of requirements for the Systems testing framework being built for Portland State Aerospace Society (PSAS). It documents the purpose and scope for this project, stakeholders and target audiences. Then it goes on to define each requirement for the project which will be completely software based. 
 
 ##1.1. Purpose and Scope##
 
-The purpose of this document is to describe the various requirements for the systems testing framework being built for PSAS rocket software by the 
-authors of this document. PSAS is non-profit group with an open source codebase. Improving the existing PSAS rocket software creates additional technical 
-capital for PSAS. Being able to show a potential donor that the rocket software system is well tested is an advantage for PSAS. Therefore, the creation of 
-this systems testing framework will be an important goal.
+The purpose of this document is to describe the various requirements for the systems testing framework being built for PSAS rocket software by the authors of this document. PSAS is non-profit group with an open source codebase. Improving the existing PSAS rocket software creates additional technical capital for PSAS. Being able to show a potential donor that the rocket software system is well tested is an advantage for PSAS. Therefore, the creation of this systems testing framework will be an important goal.
 
 The scope of the work will include all modules needed to launch a rocket.
 
@@ -219,6 +215,8 @@ This is related to requirement 3.1.4.
 The user should have a way to specify that they want to build our modifications rather than using a normal build. 
 This ties in with requirement 3.1.2 in that it should be possible to configure a test as needed. 
 
+####3.1.7 Functional tests will be the primary motivator. Unit tests are not required.####
+
 ###3.2. Usability Requirements###
 
 ####3.2.1 The capstone team will provide a method of automatically running tests and summarizing results.####
@@ -254,11 +252,9 @@ The project will be built in a separate GitHub repository. When the tests need t
 
 ####3.3.4 A goal will be to merge our changes back into the ChibiOS mainline and, as such, the changes should be kept compartmentalized as much as possible.####
 
-####3.3.5 Functional tests will be the primary motivator. Unit tests are not required.####
+####3.3.5 Our modifications shall be GPL licensed. ####
 
-####3.3.6 Our modifications shall be GPL licensed. ####
-
-####3.3.7 Documentation must exist in required format. 
+####3.3.6 Documentation must exist in required format. 
 
 There should be two types of documentation. One is User documentation, which should be written in Markdown. 
 There should also be usage examples associated with this. 
