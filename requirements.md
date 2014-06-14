@@ -262,7 +262,7 @@ Maintainer documentation is the third type, which will be notes in line with the
 
 ###3.4. Assumptions###
 
-The team has agreed upon a waterfall style work flow.
+The team has agreed upon a modified agile workflow style with some waterfall elements to it.
 
 The project is not required to be finished by July 20th for Launch 11, but a barebones prototype of the systems testing framework is required. 
 More information about the launch can be found here: [http://psas.pdx.edu/launch11/](http://psas.pdx.edu/launch11/)
