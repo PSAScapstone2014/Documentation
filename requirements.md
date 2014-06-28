@@ -267,6 +267,8 @@ The team has agreed upon a modified agile workflow style with some waterfall ele
 The project is not required to be finished by July 20th for Launch 11, but a barebones prototype of the systems testing framework is required. 
 More information about the launch can be found here: [http://psas.pdx.edu/launch11/](http://psas.pdx.edu/launch11/)
 
+HAL Timing/ Latency/ Platform-Difference Issues were determined to be beyond the scope of this project.
+
 ###3.5. Constraints###
 
 #####3.5.1. Ethernet Stack specification#####
