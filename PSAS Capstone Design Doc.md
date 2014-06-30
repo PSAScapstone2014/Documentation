@@ -280,8 +280,8 @@ Written in gcc C.
 5.3	   The Framework  
 Created by using a scripting language (possibly Robot).  
 5.3.1	Definition of Test.  
-5.3.2   Definition of Success  
-5.3.3	Definition of Failure  
+5.3.1.1   Definition of Success  
+5.3.1.2	Definition of Failure  
 5.3.4	Component Data Inputs and Data Outputs  
 5.3.4.1	Flight Computer  	
 5.3.4.2	ChibiOS Modules  
