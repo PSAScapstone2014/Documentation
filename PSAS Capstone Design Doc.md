@@ -277,23 +277,29 @@ Written in gcc C.
 			5.2.1.3	void writeOut();	 //Outputs the sensor data to a socket
 
 
-5.3	   The Framework
-Created by using a scripting language (possibly Robot).
+5.3	   The Framework  
+Created by using a scripting language (possibly Robot).  
+5.3.1	Definition of Test.  
+5.3.2   Definition of Success  
+5.3.3	Definition of Failure  
+5.3.4	Component Data Inputs and Data Outputs  
+5.3.4.1	Flight Computer  	
+5.3.4.2	ChibiOS Modules  
+5.3.4.2.1 Sensor Module  
+5.3.4.2.2 Rocket Hub Module    
+5.3.4.2.3 Servo Module  
+5.3.4.3 Sensors/GPS  
+5.3.5 Component Operations  
+5.3.5.1	Flight Computer  
+5.3.5.2 ChibiOS Modules  
+5.3.5.2.1 Sensor Module  
+5.3.5.2.2 Rocket Hub Module  
+5.3.5.2.3 Servo Module  
+5.3.5.3 Sensors/GPS  
+5.3.6	System Operation
 
 
-Read from a test configuration file (see appendix in section 7 as a possible example) (Requirements 3.1.1 and 3.1.2) 
 
-
-The framework must have the following abilities and characteristics:
-
-How the framework does this cannot be stated in explicit terms (yet), as we don’t know the tool used to create it. Once we settle on a tool, the commands used by that tool will replace the following functional needs:  
-
-•	Read from a configuration file to decide how to run tests.  
-	•	Start any number of processes including ChibiOS port based processes, Valgrind, sensor emulators, and the flight control software.  
-	•	Enable a process to communicate with any of its normally associated PSAS processes.  
-	•	Facilitate log creation and capture data exported by any PSAS process.  
-	•	Terminate any PSAS process at the end of the testing.  
-	•	Generate a report on the testing results. This is a separate file from data logs used to capture communications between modules during test.
 
 5.4	LWIP
 If a port is to be created, it will be created in gcc C. 
