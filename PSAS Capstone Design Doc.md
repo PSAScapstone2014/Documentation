@@ -217,29 +217,16 @@ At the time of this writing, it is unclear if we must create our own port of the
 The following table matches functional requirement to design component. The usability requirements section of the requirements document guide the functionality built into the framework.
 		
 
-| Design Component| Requirement  |
-|---------------|----------------|
-| Row1 Cell1    |   3.1.1   |
-| Row2 Cell1    |   3.1.2   |
-| Row1 Cell1    |   3.1.3   |
-| Row2 Cell1    |   3.1.4   |
-| Row1 Cell1    |   3.1.5   |
-| Row1 Cell1    |   3.1.6   |
-| Row1 Cell1    |   3.1.7|
-Configuration File, 
-
-Configuration File,
-
-The Framework, Sensors
-
-ChibiOS Port, Framework, Sensors
-
-ChibiOS/HAL Port
-
-ChibiOS/HAL Port
-
-The Framework
-
+| Design Component                 |Requirement|
+|----------------------------------|-----------|
+| Configuration File               |   3.1.1   |
+| Configuration File               |   3.1.2   |
+| The Framework, Sensors           |   3.1.3   |
+| ChibiOS Port, Framework, Sensors |   3.1.4   |
+| ChibiOS/HAL Port                 |   3.1.5   |
+| ChibiOS/HAL Port                 |   3.1.6   |
+| The Framework                    |   3.1.7   |
+ 
 ##7.0 Appendix  
 ###7.1 	Configuration File
 	
