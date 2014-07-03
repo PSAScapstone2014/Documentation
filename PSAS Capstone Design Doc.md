@@ -6,18 +6,18 @@ Date: (06/29/2014)
 
 Software Design Document
 
-#TABLE OF CONTENTS
+##TABLE OF CONTENTS
 
-1. [INTRODUCTION](https://github.com/nolson44/testrepo/blob/master/designdocument.md#10---introduction)
-2. [SYSTEM OVERVIEW](https://github.com/nolson44/testrepo/blob/master/designdocument.md#20-system-overview)
-3. [SYSTEM ARCHITECTURE](https://github.com/nolson44/testrepo/blob/master/designdocument.md#30-system-architecture)
-4. [DATA DESIGN](https://github.com/nolson44/testrepo/blob/master/designdocument.md#40-data-design)
-5. [COMPONENT DESIGN](https://github.com/nolson44/testrepo/blob/master/designdocument.md#50-component-design)
-6. [REQUIREMENTS MATRIX](https://github.com/nolson44/testrepo/blob/master/designdocument.md#60-requirements-matrix)
-7. [APPENDIX](https://github.com/nolson44/testrepo/blob/master/designdocument.md#70-appendix)
+1. [Introduction](https://github.com/nolson44/testrepo/blob/master/designdocument.md#10---introduction)
+2. [System Overview](https://github.com/nolson44/testrepo/blob/master/designdocument.md#20-system-overview)
+3. [System Architecture](https://github.com/nolson44/testrepo/blob/master/designdocument.md#30-system-architecture)
+4. [Data Design](https://github.com/nolson44/testrepo/blob/master/designdocument.md#40-data-design)
+5. [Component Design](https://github.com/nolson44/testrepo/blob/master/designdocument.md#50-component-design)
+6. [Requirements Matrix](https://github.com/nolson44/testrepo/blob/master/designdocument.md#60-requirements-matrix)
+7. [Appendix](https://github.com/nolson44/testrepo/blob/master/designdocument.md#70-appendix)
 
 
-##1.0	INTRODUCTION
+##1.0	Introduction
 
 ###1.1	Purpose
 PSAS, the Portland State Aerospace Society, is in search of a way to test their rocketry software without the need for hardware. They would like to simulate how the different software modules behave when controlling the flight of a rocket.
@@ -30,7 +30,7 @@ software to support the testing of PSAS software/firmware within that framework.
 project will not emulate any micro-controller.
 
 
-##2.0. SYSTEM OVERVIEW
+##2.0. System Overview
 
 The system consists of a software testing framework (referred to from now on as just the framework)
 capable of driving, coordinating, and running functional tests on the PSAS software, as well as
@@ -45,21 +45,21 @@ any auxiliary software needed to facilitate running any PSAS software. In partic
 •	The minimum version of the gcc compiler used will be 4.8.  
 
 ###2.2	Resources
-	•	PSAS subject matter experts Theo, Nathan and K. Wilson.  
-	•	PSAS GitHub Repository.  
-	•	Capstone GitHub Repository.  
-	•	ChiobiOS forums and GitHub Repository  
-	•	Capstone Team Members.  
-	•	Meeting room in FAB-84.  
-	•	Google hangout for team.  
-	•	Team members and the computers they are using.  
-	•	E-mail and phone numbers.  
-	•	Requirements document  
-	•	elderberry (the code generator)  
-	•	telemetry viewer  
+•	PSAS subject matter experts Theo, Nathan and K. Wilson.  
+•	PSAS GitHub Repository.  
+•	Capstone GitHub Repository.  
+•	ChiobiOS forums and GitHub Repository  
+•	Capstone Team Members.  
+•	Meeting room in FAB-84.  
+•	Google hangout for team.  
+•	Team members and the computers they are using.  
+•	E-mail and phone numbers.  
+•	Requirements document  
+•	elderberry (the code generator)  
+•	telemetry viewer  
 
 	
-##3.0. SYSTEM ARCHITECTURE
+##3.0. System Architecture
 
 ###3.1	Architectural Design
 		
@@ -122,7 +122,7 @@ Note that the following modules that are on the PSAS graph are not present on th
 The design is constrained by the need to have a scriptable solution for the framework, and the need to have a framework that can function both as a straight command line application and a functional test that can be invoked as part of a make process. A configuration file that the framework reads will facilitate turning on and off components and setting parameters such as where to send or find data. Regarding the ChibiOS port, we have no options but to port ChibiOS given that the microcontrollers that the flight computer relies on run ChibiOS.  
 
 
-##4.0. DATA DESIGN
+##4.0. Data Design
 
 ###4.1	Data Description
 		
@@ -133,7 +133,7 @@ While the exact format of the file header is to be determined, it should include
 The body of the file should contain column headers and values in chronological order. There will be a separate log file for each process that participates and generates or receives information. As mentioned above, all data will be comma separated.
 
 
-##5.0. COMPONENT DESIGN  
+##5.0. Component Design  
 ###5.1   The ChibiOS/HAL Port
 Written in GCC C.
 
@@ -212,7 +212,7 @@ If a port is to be created, it will be created in gcc C.
 At the time of this writing, it is unclear if we must create our own port of the lwIP stack. It is possible that such a port exists. If we can’t find such a port, or port lwIP ourselves, we will fall back on using standard sockets.
 
 
-##6.0. REQUIREMENTS MATRIX
+##6.0. Requirements Matrix
 
 The following table matches functional requirement to design component. The usability requirements section of the requirements document guide the functionality built into the framework.
 		
@@ -240,7 +240,7 @@ ChibiOS/HAL Port
 
 The Framework
 
-##7.0 APPENDIX  
+##7.0 Appendix  
 ###7.1 	Configuration File
 	
 The framework uses a configuration file that details which processes are to be started, initial conditions for those processes, how those processes transmit data, how those processes receive data, and any helper processes.
