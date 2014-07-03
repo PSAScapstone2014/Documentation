@@ -8,13 +8,13 @@ Software Design Document
 
 #TABLE OF CONTENTS
 
-1.	INTRODUCTION........................................1
-2.	SYSTEM OVERVIEW.................................1
-3.  SYSTEM ARCHITECTURE..........................3
-4.	DATA DESIGN..........................................6
-5. COMPONENT DESIGN...............................6
-6.	REQUIREMENTS MATRIX...........................6
-7. APPENDIX................................................9
+1. [INTRODUCTION](https://github.com/nolson44/testrepo/blob/master/designdocument.md#10---introduction)
+2. [SYSTEM OVERVIEW](https://github.com/nolson44/testrepo/blob/master/designdocument.md#20-system-overview)
+3. [SYSTEM ARCHITECTURE](https://github.com/nolson44/testrepo/blob/master/designdocument.md#30-system-architecture)
+4. [DATA DESIGN](https://github.com/nolson44/testrepo/blob/master/designdocument.md#40-data-design)
+5. [COMPONENT DESIGN](https://github.com/nolson44/testrepo/blob/master/designdocument.md#50-component-design)
+6. [REQUIREMENTS MATRIX](https://github.com/nolson44/testrepo/blob/master/designdocument.md#60-requirements-matrix)
+7. [APPENDIX](https://github.com/nolson44/testrepo/blob/master/designdocument.md#70-appendix)
 
 
 ##1.0	INTRODUCTION
