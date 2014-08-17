@@ -10,6 +10,7 @@ The Robot Framework uses a structure they call test tables, in order to automate
 Setting Table
 This table has the following format:
 *Setting* | *Value*
+--------- | -------
 Library | SendReceiveLibrary.py
 
 This tells the Robot Framework that we want it to use a Library of pre-defined keywords for testing. The SendReceiveLibrary.py file defines several methods that are used for testing.
@@ -17,6 +18,7 @@ This tells the Robot Framework that we want it to use a Library of pre-defined k
 Test Case Table
 
 *Test Case* | *Action* | *Argument* | *Argument* | *Argument* | *Argument* | *Argument* |
+----------- | -------- | ---------- | ---------- | ---------- | ---------- | ---------- |
 Send and receive data from a ChibiOs serial app | ${ret}= | Send And Receive | 27000 | dataToDriver.tsv | ./serial_test | ./fakeApp
  | Echo Test | ${ret} | SendAndReceive.tsv
 
@@ -26,6 +28,7 @@ The first row defines that this is the Test Cases table. The second row defines 
 ##2. Library Method Description
 Methods
 Name | Description
+---- | -----------
 sim_format(self, lld, data) | THIS FUNCTION NEEDS A PROPER DESCRIPTION
 send_to_driver(self, fileName, fileDesc, driver) | Reads data from a file and sends it over a port.
 send_and_receive(self, port, fileName, *apps) | This method receives data from a port and sends it to a specified driver.
@@ -36,9 +39,11 @@ echo_test(self, data, fileName) | This method defines a test.
 **send_to_driver(self,fileName, fileDesc, driver)**
 
 **send_and_receive(self, port, fileName, *apps)**
+
 This method takes a port, fileName, and a list of applications as input. The port given specifies which port to open a connection to, used to send data to a specified driver. The data sent is contained in the file given by fileName. The method also starts any necessary applications before sending data over the port.
 
 **echo_test(self, data, fileName)**
+
 This method takes a set of data and a filename as input. It reads data from the file given by fileName and compares it to the data input. If they match, the test passes, otherwise the test fails.
 
 
