@@ -202,7 +202,7 @@ The Serial Peripheral Interface driver is responsible for reading and writing to
 
 # PSAS Project Integration
 
-In order to compile and run the PSAS projects in simulator mode, some changes must be made.
+In order to compile and run the PSAS projects in simulator mode, each driver that the project uses must have an implemented simulator LLD and some changes to the project must be made.
 
 1. The project must be compiled with SIMULATOR defined.
   ```bash
