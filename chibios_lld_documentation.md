@@ -196,9 +196,27 @@ The serial driver emulates a serial cable connection. The unit test reads in a b
 
 Driver Identifier: **SPI_IO**
 
-The Serial Peripheral Interface driver is responsible for reading and writing to the SPI bus. It's functionality is similar to that of the serial driver with one exception. The SPI driver is able to select differing slaves from which data is read or written.
+The Serial Peripheral Interface driver is responsible for reading and writing to the SPI bus. It has several modes of operation to select differing slave devices, read, write, and exchange data.
 
-**TODO PROTOCOL**
+SPI uses a protocol to indicate which operation is being performed. The protocol consists of an operation message followed by 0 or more data messages. The unit test go script for SPI has an example of usage.
+
+#### Operations
+
+##### select *N* / unselect *N*
+
+The select and unselect operations are followed by a number *N* to indicate which virtual slave should be selected or unselected. No data message is provided.
+
+##### exchange
+
+The exchange message indicates that the LLD will write some data to the VHA and then immediately wait for a response message. After the VHA completes its write, the operation should be terminated by the VHA by writing a message containing an arbitrary byte.
+
+##### polled_exchange
+
+Similar to exchange except that no termination message is required.
+
+##### send / receive
+
+The send and receive operations indicate that data is to be read or written, respectively, to the LLD by the VHA. The VHA should then terminate the operation by sending a message containing an arbitrary byte.
 
 # PSAS Project Integration
 
