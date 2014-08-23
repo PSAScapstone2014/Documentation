@@ -11,9 +11,9 @@ Documentation
 The purpose of this document is to describe some of the files in the TestingFramework repository.
 
 ##2. Robot Framework Test Table
-This section will describe the testing table, located in SendReceiveTest.tsv file.
+This section will describe the testing table, located in [SendReceiveTest.tsv](https://github.com/PSAScapstone2014/TestingFramework/blob/master/serial_test_example/SendReceiveTest.tsv) file in the serial_test_example folder.
 
-The Robot Framework uses a structure they call test tables, in order to automate testing. Each test table has up to four different sub tables that help define the test; these are the Setting, Variable, Test Case, and Keyword tables.
+The Robot Framework uses a structure they call test tables, in order to automate testing. Each test table has up to four different sub tables that help define the test; these are the Setting, Variable, Test Case, and Keyword tables. The Keyword table is not used in this file.
 Setting Table
 
 This table has the following format:
@@ -22,6 +22,17 @@ This table has the following format:
 Library | SendReceiveLibrary.py
 
 This tells the Robot Framework that we want it to use a Library of pre-defined keywords for testing. The SendReceiveLibrary.py file defines several methods that are used for testing.
+
+Variables Table
+*Variables* | *Value*
+--- | ---
+${ARGS} | ./
+${APP} | ${ARGS}serialTest
+@{DRIVERS} | SD1_IO
+@{DATA_FILES} | SendReceiveData.tsv
+${PORT} | 27000
+
+This table lists different variables that can be used by the test in different actions. The ${NAME} represents a scalar variable for the test. The @{NAME} represents a list variable, a variable that can have multiple values assigned to it.
 
 Test Case Table
 
@@ -34,18 +45,15 @@ The first row defines that this is the Test Cases table. The second row defines 
 
 
 ##3. Library Method Description
-This section describes the methods in the SendReceiveLibrary.py file in the send_and_receive_demo folder.
+This section describes the methods in the [SendReceiveLibrary.py](https://github.com/PSAScapstone2014/TestingFramework/blob/master/serial_test_example/SendReceiveLibrary.py) file in the serial_test_example folder.
 
 Methods
 
 Name | Description
 ---- | -----------
-sim_format(self, lld, data) | THIS FUNCTION NEEDS A PROPER DESCRIPTION
 send_to_driver(self, fileName, fileDesc, driver) | Reads data from a file and sends it over a port.
 send_and_receive(self, port, fileName, *apps) | This method receives data from a port and sends it to a specified driver.
 echo_test(self, data, fileName) | This method defines a test.
-
-**sim_format(self, lld, data)**
 
 **send_to_driver(self,fileName, fileDesc, driver)**
 
@@ -58,4 +66,5 @@ This method takes a set of data and a filename as input. It reads data from the 
 
 ##4. References
 Robot Framework User Guide - http://robotframework.googlecode.com/svn/trunk/doc/userguide/RobotFrameworkUserGuide.html
+
 TestingFramework Repository - https://github.com/PSAScapstone2014/TestingFramework
