@@ -10,8 +10,13 @@ Documentation
 4. References
 
 ##1. Introduction
-###1.1 Purpose
+####1.1 Purpose
 The purpose of this document is to describe some of the files in the TestingFramework repository.
+
+####1.2 Valgrind and Robot Framework
+Valgrind can be run alongside the Robot Framework via the command line. To run Valgrind with the framework you can run the framework with the following arguments: <br>
+pybot --variable ARGS:valgrind_./ --escape space:_ TEST_TABLE.tsv <br>
+More on using variables with Robot Framework can be found here: http://robotframework.googlecode.com/svn/trunk/doc/userguide/RobotFrameworkUserGuide.html#setting-variables-in-command-line
 
 ##2. Robot Framework Test Table
 This section will describe the testing table, located in [SendReceiveTest.tsv](https://github.com/PSAScapstone2014/TestingFramework/blob/master/serial_test_example/SendReceiveTest.tsv) file in the serial_test_example folder.
