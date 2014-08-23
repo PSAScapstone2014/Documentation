@@ -16,14 +16,14 @@ This section will describe the testing table, located in [SendReceiveTest.tsv](h
 The Robot Framework uses a structure they call test tables, in order to automate testing. Each test table has up to four different sub tables that help define the test; these are the Setting, Variable, Test Case, and Keyword tables. The Keyword table is not used in this file.
 Setting Table
 
-This table has the following format:
 *Setting* | *Value*
 --------- | -------
 Library | SendReceiveLibrary.py
 
-This tells the Robot Framework that we want it to use a Library of pre-defined keywords for testing. The SendReceiveLibrary.py file defines several methods that are used for testing.
+This tells the Robot Framework that we want it to use a Library of pre-defined keywords for testing. The SendReceiveLibrary.py file defines several methods that are used for testing. More libraries can be defined in the same method.
 
 Variables Table
+
 *Variables* | *Value*
 --- | ---
 ${ARGS} | ./
@@ -38,11 +38,10 @@ Test Case Table
 
 *Test Case* | *Action* | *Argument* | *Argument* | *Argument* | *Argument* | *Argument* |
 ----------- | -------- | ---------- | ---------- | ---------- | ---------- | ---------- |
-Send and receive data from a ChibiOs serial app | ${ret}= | Send And Receive | 27000 | dataToDriver.tsv | ./serial_test | ./fakeApp
- | Echo Test | ${ret} | SendAndReceive.tsv
+Send and receive data from a ChibiOs serial app | ${ret}= | Send And Receive | ${PORT} | ${DRIVERS} | ${DATA_FILES} | ${APP}
+ | Echo Test | ${ret} | SendReceiveData.tsv
 
-The first row defines that this is the Test Cases table. The second row defines the first test case and the first action to be taken for that test case. The first test case is called "Send and receive data from a ChibiOS serial app." It then defines the first action to be taken for that test case, which is to call the Send And Receive keyword, which is a method located in the file SendReceiveLibrary.py, with the appropriate arguments and then saves the value that method returns in the variable ${ret}. The third row defines the second action to be taken for the test case, which is to call the Echo Test keyword with the appropriate arguments. This keyword is also a method located in the file SendReceiveLibrary.py.
-
+The first row defines that this is the Test Cases table. It also indicates which columns are the action to be taken, and the arguments for that action. The second row defines the first (and only) test case and the first action to be taken for that test case. The test case is called "Send and receive data from a ChibiOS serial app." It then defines the first action to be taken on that test case, which is to save the return value from the Send And Receive keyword (A method located in the SendReceiveLibrary.py file) with the appropriate arguments. The second action defined is calling the Echo Test keyword (Another method defined in the SendReceiveLibrary.py file) with it's arguments, one of which is the return value from the previous action.
 
 ##3. Library Method Description
 This section describes the methods in the [SendReceiveLibrary.py](https://github.com/PSAScapstone2014/TestingFramework/blob/master/serial_test_example/SendReceiveLibrary.py) file in the serial_test_example folder.
