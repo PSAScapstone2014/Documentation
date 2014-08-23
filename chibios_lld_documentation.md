@@ -15,7 +15,7 @@ This simulator has only been tested on relatively recent versions of linux.
   ```bash
   cd stm32
   git submodule update --init
-  ```
+  
 
 1. Unpack the lwIP package. (Required but unused.)
 
@@ -123,8 +123,10 @@ This identifier must be passed as the first argument to the IO functions of the 
 ## LLD Detail
 
 ### ADC
+Driver Identifier: **ADC_IO**
 
-**INSERT ADC DOC**
+The Analog to Digital Converter driver is use to convert analog data to digital data. The driver is implement both ways one to convert analog buffer data to digital output. Another is to output the digital output buffer. There's three conversion modes one shot, linear, and circular. One shot and linear conversion modes are about same where it stop at the end of the buffer. Circular, there's a thread of which it will go over the buffer over and over until it's interrupted. 
+
 
 ### EXT
 
@@ -140,7 +142,11 @@ The go script for the EXT unit test will emulate a button push on channel 0 ever
 
 ### I2C
 
-**INSERT I2C DOC**
+Driver Identifer: **I2C**
+
+The Inter-Integrated Circuit driver is used to read and write the I^2C bus. Similar to SPI, however it timeouts, when recieving and transmitting data. 
+
+
 
 ### PAL
 
@@ -152,8 +158,9 @@ The go script for the PAL unit test simply prints out the status of IO ports as 
 
 ### PWM
 
-**INSERT PWM DOC**
+Driver Identifier: **PWM**
 
+The Pulse Width Modulation driver is used regulate power to a device example would control the speed of an motor. In the simulator, it displays the frequency and the period. 
 ### RTC
 
 Driver Identifier: **None**
