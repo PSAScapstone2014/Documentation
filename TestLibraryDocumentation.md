@@ -3,6 +3,9 @@ Documentation
 ##Table of Contents
 1. Introduction
 2. Robot Framework Test Table
+2.1. Setting Table
+2.2. Variables Table
+2.3. Test Cases Table
 3. Library Method Description
 4. References
 
@@ -14,7 +17,8 @@ The purpose of this document is to describe some of the files in the TestingFram
 This section will describe the testing table, located in [SendReceiveTest.tsv](https://github.com/PSAScapstone2014/TestingFramework/blob/master/serial_test_example/SendReceiveTest.tsv) file in the serial_test_example folder.
 
 The Robot Framework uses a structure they call test tables, in order to automate testing. Each test table has up to four different sub tables that help define the test; these are the Setting, Variable, Test Case, and Keyword tables. The Keyword table is not used in this file.
-Setting Table
+
+####2.1 Setting Table
 
 *Setting* | *Value*
 --------- | -------
@@ -22,7 +26,7 @@ Library | SendReceiveLibrary.py
 
 This tells the Robot Framework that we want it to use a Library of pre-defined keywords for testing. The SendReceiveLibrary.py file defines several methods that are used for testing. More libraries can be defined in the same method.
 
-Variables Table
+####2.2 Variables Table
 
 *Variables* | *Value*
 --- | ---
@@ -34,7 +38,7 @@ ${PORT} | 27000
 
 This table lists different variables that can be used by the test in different actions. The ${NAME} represents a scalar variable for the test. The @{NAME} represents a list variable, a variable that can have multiple values assigned to it.
 
-Test Case Table
+####2.3 Test Case Table
 
 *Test Case* | *Action* | *Argument* | *Argument* | *Argument* | *Argument* | *Argument* |
 ----------- | -------- | ---------- | ---------- | ---------- | ---------- | ---------- |
