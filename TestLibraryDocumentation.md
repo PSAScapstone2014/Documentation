@@ -50,20 +50,25 @@ The first row defines that this is the Test Cases table. It also indicates which
 ##3. Library Method Description
 This section describes the methods in the [SendReceiveLibrary.py](https://github.com/PSAScapstone2014/TestingFramework/blob/master/serial_test_example/SendReceiveLibrary.py) file in the serial_test_example folder.
 
-Methods
+**Methods**
 
-Name | Description
+**Name** | **Description**
 ---- | -----------
-send_to_driver(self, fileName, fileDesc, driver) | Reads data from a file and sends it over a port.
-send_and_receive(self, port, fileName, *apps) | This method receives data from a port and sends it to a specified driver.
+send_to_driver(fileName, fileDesc, driver) | Reads data from a file and sends it over a port.
+send_and_receive(self, simioPort, drivers, dataFiles, arguments) | This method receives data from a port and sends it to a specified driver.
+send_and_receive_with_lwip(self, simioPort, drivers, dataFiles, lwipPort, lwipAddress, arguments) | This method sends data to a specified driver using lwip.
 echo_test(self, data, fileName) | This method defines a test.
 
-**send_to_driver(self,fileName, fileDesc, driver)**
+**send_to_driver(fileName, fileDesc, driver)** <br>
+This method reads a TSV file and sends the contents to a socket that represents the IO interface for a low-level driver. The data is what will be sent to the driver and the time is the time stamp of the data, the method will delay it's sends to the socket to simulate the time elapse represented by the difference of the time stamps.
 
-**send_and_receive(self, port, fileName, *apps)**
-This method takes a port, fileName, and a list of applications as input. The port given specifies which port to open a connection to, used to send data to a specified driver. The data sent is contained in the file given by fileName. The method also starts any necessary applications before sending data over the port.
+**send_and_receive(self, simioPort, druvers, dataFiles, arguments)** <br>
+This method represents a keyword that can be used in the test table. This keyword starts up a ChibiOS application, sends data to the app, receives data that the app outputs, and finally closes the app. The file in dataFiles must have the same index as the driver it needs to be sent to in drivers. 
 
-**echo_test(self, data, fileName)**
+**send_and_receive_with_lwip(self, simioPort, drivers, dataFiles, lwipPort, lwipAddress, arguments)** <br>
+This method is the same as send_and_recieve except it collects data from an outgoing lwip connection as well as from the drivers.
+
+**echo_test(self, data, fileName)** <br>
 This method takes a set of data and a filename as input. It reads data from the file given by fileName and compares it to the data input. If they match, the test passes, otherwise the test fails.
 
 
