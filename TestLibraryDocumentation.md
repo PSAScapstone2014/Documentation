@@ -57,7 +57,7 @@ This section describes the methods in the [SendReceiveLibrary.py](https://github
 send_to_driver(fileName, fileDesc, driver) | Reads data from a file and sends it over a port.
 send_and_receive(self, simioPort, drivers, dataFiles, arguments) | This method receives data from a port and sends it to a specified driver.
 send_and_receive_with_lwip(self, simioPort, drivers, dataFiles, lwipPort, lwipAddress, arguments) | This method sends data to a specified driver using lwip.
-echo_test(self, data, fileName) | This method defines a test.
+echo_test(self, data, fileName) | This method is an example of a user defined test.
 
 **send_to_driver(fileName, fileDesc, driver)** <br>
 This method reads a TSV file and sends the contents to a socket that represents the IO interface for a low-level driver. The data is what will be sent to the driver and the time is the time stamp of the data, the method will delay it's sends to the socket to simulate the time elapse represented by the difference of the time stamps.
@@ -69,9 +69,10 @@ This method represents a keyword that can be used in the test table. This keywor
 This method is the same as send_and_recieve except it collects data from an outgoing lwip connection as well as from the drivers.
 
 **echo_test(self, data, fileName)** <br>
-This method takes a set of data and a filename as input. It reads data from the file given by fileName and compares it to the data input. If they match, the test passes, otherwise the test fails.
+This method is an example of a user defined test. The keyword echo_test will take the dictionary returned from send_and_receive and check that the data sent from the serial driver matches the data in a provided TSV data file.
 
 
 ##4. References
 Robot Framework User Guide - http://robotframework.googlecode.com/svn/trunk/doc/userguide/RobotFrameworkUserGuide.html <br>
-TestingFramework Repository - https://github.com/PSAScapstone2014/TestingFramework
+TestingFramework Repository - https://github.com/PSAScapstone2014/TestingFramework <br>
+Robot Framework and Command Line Variables - http://robotframework.googlecode.com/svn/trunk/doc/userguide/RobotFrameworkUserGuide.html#setting-variables-in-command-line
