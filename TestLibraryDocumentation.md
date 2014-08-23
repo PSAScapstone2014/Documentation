@@ -1,13 +1,8 @@
-Documentation
-
 ##Table of Contents
-1. Introduction
-2. Robot Framework Test Table
-2.1. Setting Table
-2.2. Variables Table
-2.3. Test Cases Table
-3. Library Method Description
-4. References
+1. [Introduction](https://github.com/PSAScapstone2014/Documentation/blob/master/TestLibraryDocumentation.md#1-introduction)
+2. [Robot Framework Test Table](https://github.com/PSAScapstone2014/Documentation/blob/master/TestLibraryDocumentation.md#2-robot-framework-test-table)
+3. [Library Method Description](https://github.com/PSAScapstone2014/Documentation/blob/master/TestLibraryDocumentation.md#3-library-method-description)
+4. [References](https://github.com/PSAScapstone2014/Documentation/blob/master/TestLibraryDocumentation.md#4-references)
 
 ##1. Introduction
 ####1.1 Purpose
@@ -78,6 +73,5 @@ This method takes a set of data and a filename as input. It reads data from the 
 
 
 ##4. References
-Robot Framework User Guide - http://robotframework.googlecode.com/svn/trunk/doc/userguide/RobotFrameworkUserGuide.html
-
+Robot Framework User Guide - http://robotframework.googlecode.com/svn/trunk/doc/userguide/RobotFrameworkUserGuide.html <br>
 TestingFramework Repository - https://github.com/PSAScapstone2014/TestingFramework
