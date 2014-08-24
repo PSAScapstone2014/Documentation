@@ -41,7 +41,7 @@ We are developing a test platform to validate functionality of embedded rocket s
 Primary stakeholder for this project is Theo Hill from PSAS. The other team members of PSAS are additional stakeholders. The main target audience for this product are the members of PSAS. If the project goes on to make significant changes to ChibiOS, the maintainers for this operating system may also be an additional target audience.
 
 ##3. Requirements##
-**_Total Requirements that were met: 11/19_** 
+**_Total Requirements that were met: 18/19_** 
 
 ###3.1. Functional Requirements###
 **Total Requirements met: 7/7**
@@ -113,7 +113,7 @@ This is in conjunction with requirements 3.1.4 and 3.3.1.
 _This requirement has been met._
 
 ###3.3. Technical, Environmental and Interaction Requirements###
-**Total Requirments met: 3/6**
+**Total Requirments met: 5/6**
 
 ####3.3.1 The test framework must run on x64 Debian Linux system with GCC version 4.8. ####
 _The sponsor has accepted the test framework with the -m32 flag on Linux systems. We have verified with the sponsor and met this requirement._
@@ -129,7 +129,7 @@ The project will be built in a separate GitHub repository. When the tests need t
 _This has been met._
 
 ####3.3.4 A goal will be to merge our changes back into the ChibiOS mainline and, as such, the changes should be kept compartmentalized as much as possible.####
-_This is under the discussion but may not happen by the end of the capstone._
+_This is under the discussion but may not happen by the end of the capstone. We will provide PSAS with a binary including the changes which are to be transferred to ChibiOS mainline._
 
 ####3.3.5 Our modifications shall be GPL licensed. ####
 _This has been met._
