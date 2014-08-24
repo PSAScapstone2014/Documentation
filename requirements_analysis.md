@@ -85,7 +85,7 @@ _This requirement is met._
 _This requirement is met._
 
 ###3.2. Usability Requirements###
-**Total Requirements met: 1/6**
+**Total Requirements met: 6/6**
 
 ####3.2.1 The capstone team will provide a method of automatically running tests and summarizing results.####
 
@@ -96,22 +96,27 @@ _This requirement has been met. The result summarization has been met via the HT
 ####3.2.2 The tests should be suited for automated nightly build testing.####
 
 Automated testing is an important usability need in order to reduce the in person hours needed by the team members.
+_This requirement has been met._
  
 ####3.2.3 It must be possible to use the test framework with other testing tools like Valgrind.  ####
+_This requirement has been met._
 
 ####3.2.4 The users must be able to prototype a new functionality. ####
+_This requirement has been met._
 
 ####3.2.5 The users should be able to simulate failure and to see how the system reacts. ####
+_This requirement has been met._
 
 ####3.2.6 Users should be able to simulate embedded system with a non-embedded system.####
 
 This is in conjunction with requirements 3.1.4 and 3.3.1. 
+_This requirement has been met._
 
 ###3.3. Technical, Environmental and Interaction Requirements###
 **Total Requirments met: 3/6**
 
 ####3.3.1 The test framework must run on x64 Debian Linux system with GCC version 4.8. ####
-_Need to discuss this._
+_The sponsor has accepted the test framework with the -m32 flag on Linux systems. We have verified with the sponsor and met this requirement._
 
 ####3.3.2 Our work will use the main ChibiOS 2.6.3 repository as a baseline. The PSAS fork of ChibiOS will only be consulted as needed. ####
 
@@ -124,7 +129,7 @@ The project will be built in a separate GitHub repository. When the tests need t
 _This has been met._
 
 ####3.3.4 A goal will be to merge our changes back into the ChibiOS mainline and, as such, the changes should be kept compartmentalized as much as possible.####
-_This is in the discussion but may not happen by the end of the capstone._
+_This is under the discussion but may not happen by the end of the capstone._
 
 ####3.3.5 Our modifications shall be GPL licensed. ####
 _This has been met._
@@ -134,7 +139,7 @@ _This has been met._
 There should be two types of documentation. One is User documentation, which should be written in Markdown. 
 There should also be usage examples associated with this. 
 Maintainer documentation is the third type, which will be notes in line with the code. 
-_There is some documentation available, but its not consolidated yet._ 
+_This requirement has been met._ 
 
 ###3.4. Assumptions###
 
@@ -143,7 +148,7 @@ _This is not a requirement. Its just a description of our workflow style._
 
 The project is not required to be finished by July 20th for Launch 11, but a barebones prototype of the systems testing framework is required. 
 More information about the launch can be found here: [http://psas.pdx.edu/launch11/](http://psas.pdx.edu/launch11/)
-_We did not meet this as our framework was not used on the Launch, but we did have our first prototype before the Launch happened._
+_Our framework was not used on the Launch, but we did have our first prototype before the Launch happened._
 
 HAL Timing/ Latency/ Platform-Difference Issues were determined to be beyond the scope of this project.
 _This was a previous agreement we have held on to._
@@ -156,7 +161,6 @@ But the current design of the microcontrollers requires lwIP. This is more of a 
 _We have done some work to simulate network ports._
 
 ##4. Deliverables##
-**_This is partially done._**
 
 A successful product is based on the following criteria.
 
@@ -164,11 +168,11 @@ A successful product is based on the following criteria.
 
 * It must be able to produce a test binary using either Git-clone or make. This test binary should be able to run several tests in an automated fashion.  _This is in the works._ 
 
-* There must be documentation, possibly in the form of user instructions and written in Markdown. _This is in the works._
+* There must be documentation, possibly in the form of user instructions and written in Markdown. _This is complete._
 
 * Additionally, ChibiOS fork changes that may be delivered to the original project for this operating system should be prepared as a Github project. _This is in the works._
 
-The final capstone presentation is on August 25th. All matters related to this project will be complete by that date. _This may not be the case if the ChibiOS mainline task goes through._
+The final capstone presentation is on August 25th. All matters related to this project will be complete by that date. _All tasks except for ChibiOS mainline is complete._
 
 ##5. References##
 
