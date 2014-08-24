@@ -138,7 +138,9 @@ The go script for the EXT unit test will emulate a button push on channel 0 ever
 
 ### GPT
 
-**INSERT GPT DOC**
+Driver Identifier: **GPT**
+
+The General Purpose Timer is used to set up timers for ChibiOS. It can create timers, start them, set them to run for specified amount of time, do polled delays and stop when done with the timers. 
 
 ### I2C
 
