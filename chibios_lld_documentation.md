@@ -15,7 +15,7 @@ This simulator has only been tested on relatively recent versions of linux.
   ```bash
   cd stm32
   git submodule update --init
-  
+
 
 1. Unpack the lwIP package. (Required but unused.)
 
@@ -125,7 +125,7 @@ This identifier must be passed as the first argument to the IO functions of the 
 ### ADC
 Driver Identifier: **ADC_IO**
 
-The Analog to Digital Converter driver is use to convert analog data to digital data. The driver is implement both ways one to convert analog buffer data to digital output. Another is to output the digital output buffer. There's three conversion modes one shot, linear, and circular. One shot and linear conversion modes are about same where it stop at the end of the buffer. Circular, there's a thread of which it will go over the buffer over and over until it's interrupted. 
+The Analog to Digital Converter driver is use to convert analog data to digital data. The driver is implement both ways one to convert analog buffer data to digital output. Another is to output the digital output buffer. There's three conversion modes one shot, linear, and circular. One shot and linear conversion modes are about same where it stop at the end of the buffer. Circular, there's a thread of which it will go over the buffer over and over until it's interrupted.
 
 
 ### EXT
@@ -138,17 +138,15 @@ The go script for the EXT unit test will emulate a button push on channel 0 ever
 
 ### GPT
 
-Driver Identifier: **GPT**
+Driver Identifier: **None**
 
-The General Purpose Timer is used to set up timers for ChibiOS. It can create timers, start them, set them to run for specified amount of time, do polled delays and stop when done. 
+The General Purpose Timer is used to set up timers for ChibiOS. It can create timers, start them, set them to run for specified amount of time, do polled delays and stop when done.
 
 ### I2C
 
-Driver Identifer: **I2C**
+Driver Identifer: **I2C_IO**
 
-The Inter-Integrated Circuit driver is used to read and write the I^2C bus. Similar to SPI, however it timeouts, when recieving and transmitting data. 
-
-
+The Inter-Integrated Circuit driver is used to read and write the I^2C bus. Similar to SPI, however it timeouts, when recieving and transmitting data.
 
 ### PAL
 
@@ -160,9 +158,12 @@ The go script for the PAL unit test simply prints out the status of IO ports as 
 
 ### PWM
 
-Driver Identifier: **PWM**
+Driver Identifier: **PWM_IO**
 
-The Pulse Width Modulation driver is used regulate power to a device example would control the speed of an motor. In the simulator, it displays the frequency and the period. 
+The Pulse Width Modulation driver is used regulate power to a device example would control the speed of an motor. In the simulator, it displays the frequency and the period.
+
+The PWM LLD has three outputs: `period N` indicates a change in period for channel *N*. `enable channel N width M` indicates that the driver has set a new pulse width *M* for channel *N*. `disable channel N` indicates that channel *N* is disabled.
+
 ### RTC
 
 Driver Identifier: **None**
