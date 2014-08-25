@@ -164,6 +164,8 @@ The Pulse Width Modulation driver is used regulate power to a device example wou
 
 The PWM LLD has three outputs: `period N` indicates a change in period for channel *N*. `enable channel N width M` indicates that the driver has set a new pulse width *M* for channel *N*. `disable channel N` indicates that channel *N* is disabled.
 
+The go script for the PWM unit test will loop forever while incrementing and decrementing the pulse period.
+
 ### RTC
 
 Driver Identifier: **None**
